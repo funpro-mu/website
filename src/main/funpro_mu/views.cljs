@@ -21,7 +21,7 @@
    [:img {:src "img/kyle-glenn--f8ssjFhD1k-unsplash.jpg"
           :alt "Always room to grow"}]
    [:div.mx-auto
-    [:h2.text-4xl "Vision"]
+    [:h2.text-4xl "Moving forward"]
     [:p.max-w-sm.text-justify "Our vision is to share knowledge among people with similar interest while growing together."]]])
 
 (defn home
