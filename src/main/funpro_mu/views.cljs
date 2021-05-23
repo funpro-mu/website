@@ -2,7 +2,10 @@
 
 (defn header
   []
-  [:div.px-24
+  [:div.px-24.flex
+   [:div.relative.bg-primary.w-24.h-24
+    [:img.absolute.w-fill.h-fill.object-cover {:src "img/logo-petite-dark-theme.png"
+                                               :alt "Logo"}]]
    [:h1.text-7xl.ml-8.mt-6 "Functional Programmers"]])
 
 (defn about
@@ -26,7 +29,7 @@
 
 (defn home
   []
-  [:div
+  [:div.bg-secondary
    [header]
    [about]
    [vision]])
