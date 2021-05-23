@@ -1,0 +1,7 @@
+/.cpcache
+/public/js
+/public/css
+/node_modules
+/target
+/.shadow-cljs
+/.nrepl-port

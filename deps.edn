@@ -1,0 +1,9 @@
+{:paths
+ ["src/main"]
+
+ :aliases
+ {:cljs
+  {:extra-deps
+   {thheller/shadow-cljs {:mvn/version "2.14.0"}
+    reagent/reagent {:mvn/version "1.0.0"}}}}}
+
