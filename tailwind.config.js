@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+        sans: ["Raleway", ...defaultTheme.fontFamily.sans],
+        serif: ["Arvo", ...defaultTheme.fontFamily.serif],
       },
     },
     backgroundColor: theme => ({
