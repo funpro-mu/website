@@ -2,15 +2,15 @@
 
 (defn header
   []
-  [:div.px-24.flex
+  [:div.absolute.px-24.flex
    [:div.relative.bg-primary.w-24.h-24
     [:img.absolute.w-fill.h-fill.object-cover {:src "img/logo-petite-dark-theme.png"
                                                :alt "Logo"}]]
-   [:h1.text-7xl.ml-8.mt-6 "Functional Programmers"]])
+   [:h1.text-4xl.ml-8.mt-6 "Functional Programmers"]])
 
 (defn about
   []
-  [:div.mt-6.px-36.flex
+  [:section.mt-36.px-36.flex.w-full.h-screen.scroll-margin-top.snap-start
    [:img {:src "img/ian-schneider-TamMbr4okv4-unsplash-small.jpg"
           :alt "Passion led us"}]
    [:div.mx-auto
@@ -20,7 +20,7 @@
 
 (defn vision
   []
-  [:div.mt-6.px-36.flex
+  [:section.mt-36.px-36.flex.w-full.h-screen.scroll-margin-top.snap-start
    [:img {:src "img/kyle-glenn--f8ssjFhD1k-unsplash.jpg"
           :alt "Always room to grow"}]
    [:div.mx-auto
@@ -29,7 +29,7 @@
 
 (defn home
   []
-  [:div.bg-secondary
+  [:div.bg-secondary.max-h-screen.overflow-y-scroll.snap.snap-y.snap-mandatory
    [header]
    [about]
    [vision]])
