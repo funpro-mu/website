@@ -2,7 +2,7 @@ funpro.mu - Mauritius Functional Programmers
 ============================================
 
 This repository stores the source code of the website of
-Maritius Functional Programmers Community.
+Mauritius Functional Programmers Community.
 
 Contribute
 ==========
