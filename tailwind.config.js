@@ -43,8 +43,18 @@ module.exports = {
     },
     backgroundColor: theme => ({
       ...theme('colors'),
-      'primary': '#030c1b',
-      'secondary': '#f3fcff',
+      'black-pearl': '#030c1b',
+      'ebony-clay': '#212a39',
+      'slate-gray': '#d8d8d8',
+      'twilight-blue': '#f3fcff',
+      'amber': '#ffc000',
+      
+    }),
+    textColor: theme => ({
+      ...theme('colors'),
+      'slate-gray': '#d8d8d8',
+      'twilight-blue': '#f3fcff',
+      'amber': '#ffc000',
     }),
   },
   variants: {},

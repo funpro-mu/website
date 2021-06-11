@@ -2,8 +2,8 @@
 
 (defn header
   []
-  [:div.absolute.px-24.flex
-   [:div.relative.bg-primary.w-24.h-24
+  [:div.absolute.px-24.flex.w-full.bg-black-pearl.z-10
+   [:div.relative.w-24.h-24
     [:img.absolute.w-fill.h-fill.object-cover {:src "img/logo-petite-dark-theme.png"
                                                :alt "Logo"}]]
    [:h1.text-4xl.ml-8.mt-6 "Functional Programmers"]])
@@ -31,7 +31,7 @@
 
 (defn home
   []
-  [:div.bg-secondary.max-h-screen.overflow-y-scroll.snap.snap-y.snap-mandatory
+  [:div.bg-ebony-clay.text-twilight-blue.max-h-screen.overflow-y-scroll.snap.snap-y.snap-mandatory
    [header]
    [about]
    [vision]])
