@@ -2,11 +2,11 @@
 
 (defn menu-item
   [link title]
-  [:a.hover:text-amber {:href link} title])
+  [:a.hover:text-amber.text-sm {:href link} title])
 
-(defn navbar
+(defn menu-items
   []
-  [:nav.flex.flex-row.justify-between.space-x-12.py-9.px-6
+  [:<>
    [menu-item "#" "Home"]
    [menu-item "/#about-us" "Who we are"]
    [menu-item "/#our-vision" "Our vision"]
@@ -14,16 +14,34 @@
    [menu-item "#" "Sponsor us"]
    [menu-item "#" "Join us"]])
 
-(defn header
+(defn navbar
   []
-  [:div.absolute.px-24.flex.w-full.bg-black-pearl.z-10
-   [:div
+  [:nav.flex.flex-row.justify-between.space-x-6.py-9.px-6.hidden.md:block
+   [menu-items]])
+
+(defn hamburger
+  []
+  [:<>
+   [:button {:class "inline-block md:hidden w-8 h-8 bg-gray-200 text-gray-600 p-1"}
+    [:img {:src "img/hamburger.svg"
+           :alt "hamburger"}]]
+   [:div.flex.flex-col.items-end.absolute.right-0.top-16.bg-black-pearl.h-screen.px-6
+    [menu-items]]])
+
+(defn logo
+  []
+  [:div
     [:a {:href "#", :class "block"}
      [:span {:class "sr-only"} "funpro.mu"]
-     [:img {:class "h-16", :src "img/funpro.mu-dark-theme.svg", :alt "Functional Programmers Community Logo", :title "funpro.mu Logo"}]]
-   #_[:img.absolute.w-fill.h-fill.object-cover {:src "img/logo-petite-dark-theme.png"
-                                                :alt "Logo"}]]
-   [navbar]])
+     [:img {:class "hidden md:block h-16" :src "img/funpro.mu-dark-theme.svg" :alt "Functional Programmers Community Logo" :title "funpro.mu Logo"}]
+     [:img {:class "block md:hidden h-16" :src "img/logo-petite-dark-theme.png" :alt "Logo"}]]])
+
+(defn header
+  []
+  [:div.absolute.flex.justify-between.w-full.bg-black-pearl.z-10
+   [logo]
+   [navbar]
+   [hamburger]])
 
 (defn about
   []
