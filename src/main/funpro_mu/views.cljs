@@ -1,18 +1,18 @@
 (ns funpro-mu.views)
 
 (defn menu-item
-  [link title]
-  [:a.hover:text-amber.text-sm {:href link} title])
+  [link title & [classes]]
+  [:a.hover:text-amber.text-sm {:href link :class classes} title])
 
 (defn menu-items
-  []
+  [& classes]
   [:<>
-   [menu-item "#" "Home"]
-   [menu-item "/#about-us" "Who we are"]
-   [menu-item "/#our-vision" "Our vision"]
-   [menu-item "#" "Blog"]
-   [menu-item "#" "Sponsor us"]
-   [menu-item "#" "Join us"]])
+   [menu-item "#" "Home" classes]
+   [menu-item "/#about-us" "Who we are" classes]
+   [menu-item "/#our-vision" "Our vision" classes]
+   [menu-item "#" "Blog" classes]
+   [menu-item "#" "Sponsor us" classes]
+   [menu-item "#" "Join us" classes]])
 
 (defn navbar
   []
@@ -26,7 +26,7 @@
     [:img {:src "img/hamburger.svg"
            :alt "hamburger"}]]
    [:div.flex.flex-col.items-end.absolute.right-0.top-16.bg-black-pearl.h-screen.px-6
-    [menu-items]]])
+    [menu-items "py-2"]]])
 
 (defn logo
   []
