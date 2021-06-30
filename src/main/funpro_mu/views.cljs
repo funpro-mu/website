@@ -25,7 +25,7 @@
    [:button {:class "inline-block md:hidden w-8 h-8 bg-gray-200 text-gray-600 p-1"}
     [:img {:src "img/hamburger.svg"
            :alt "hamburger"}]]
-   [:div.flex.flex-col.items-end.absolute.right-0.top-16.bg-black-pearl.h-screen.px-6
+   [:nav.flex.flex-col.items-end.absolute.right-0.top-16.bg-black-pearl.h-screen.px-6.hidden
     [menu-items "py-2"]]])
 
 (defn logo
