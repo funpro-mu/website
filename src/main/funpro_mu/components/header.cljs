@@ -7,7 +7,7 @@
   []
   [:div.absolute.w-full.bg-black-pearl.z-10
    [:div.max-w-screen-xl.mx-auto
-    [:div.mx-6.my-6.flex.justify-between.items-center
+    [:div.mx-6.my-2.flex.justify-between.items-center
      [logo/logo]
      [navbar/navbar]
      [hamburger/hamburger]]]])
