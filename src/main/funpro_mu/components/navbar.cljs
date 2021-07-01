@@ -3,7 +3,7 @@
 
 (defn navbar
   []
-  [:nav.flex.flex-row.justify-between.space-x-6.py-9.px-6.hidden.md:block
+  [:nav.flex.flex-row.justify-between.space-x-6.hidden.md:block
    [menu-items/menu-items]])
 
 

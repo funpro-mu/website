@@ -5,7 +5,9 @@
 
 (defn header
   []
-  [:div.absolute.flex.justify-between.w-full.bg-black-pearl.z-10
-   [logo/logo]
-   [navbar/navbar]
-   [hamburger/hamburger]])
+  [:div.absolute.w-full.bg-black-pearl.z-10
+   [:div.max-w-screen-xl.mx-auto
+    [:div.mx-6.my-6.flex.justify-between.items-center
+     [logo/logo]
+     [navbar/navbar]
+     [hamburger/hamburger]]]])
