@@ -1,9 +1,19 @@
 (ns funpro-mu.views
-  (:require [funpro-mu.components.header :as header]))
+  (:require [funpro-mu.components.header :as header]
+            [funpro-mu.components.hero :as hero]))
+
+#_"mt-36 px-36"
+
+(def view-classes "lg:flex w-full h-screen scroll-margin-top snap-start")
+
+(defn welcome
+  []
+  [:section#welcome {:class view-classes}
+   [hero/hero]])
 
 (defn about
   []
-  [:section#about-us.mt-36.px-36.lg:flex.w-full.h-screen.scroll-margin-top.snap-start
+  [:section#about-us {:class view-classes}
    [:div.relative.pb-2-3
     [:img {:src "img/ian-schneider-TamMbr4okv4-unsplash-small.jpg"
            :alt "Passion led us"}]]
@@ -14,7 +24,7 @@
 
 (defn vision
   []
-  [:section#our-vision.mt-36.px-36.flex.w-full.h-screen.scroll-margin-top.snap-start
+  [:section#our-vision {:class view-classes}
    [:div.relative.pb-2-3
     [:img {:src "img/kyle-glenn--f8ssjFhD1k-unsplash.jpg"
            :alt "Always room to grow"}]]
@@ -27,5 +37,6 @@
   [:<>
    [header/header]
    [:div.bg-ebony-clay.text-twilight-blue.max-h-screen.overflow-y-scroll.snap.snap-y.snap-mandatory
+    [welcome]
     [about]
     [vision]]])
