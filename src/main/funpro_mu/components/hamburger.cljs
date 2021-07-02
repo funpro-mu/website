@@ -23,6 +23,6 @@
    [:button {:class (button-classes @visible)
              :on-click #(swap! visible not)}
     [ai/AiOutlineCloseSquare]]
-   [:nav.flex.flex-col.items-end.absolute.right-0.top-14.bg-black-pearl.h-screen.px-6
+   [:nav.flex.flex-col.items-end.absolute.right-0.top-14.bg-black-pearl.h-screen.px-6.text-twilight-blue
     {:class (if @visible "block" "hidden")}
     [menu-items/menu-items "py-2"]]])

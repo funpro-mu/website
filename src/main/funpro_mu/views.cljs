@@ -24,7 +24,8 @@
 
 (defn home
   []
-  [:div.bg-ebony-clay.text-twilight-blue.max-h-screen.overflow-y-scroll.snap.snap-y.snap-mandatory
+  [:<>
    [header/header]
-   [about]
-   [vision]])
+   [:div.bg-ebony-clay.text-twilight-blue.max-h-screen.overflow-y-scroll.snap.snap-y.snap-mandatory
+    [about]
+    [vision]]])

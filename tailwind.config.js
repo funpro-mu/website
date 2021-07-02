@@ -48,7 +48,6 @@ module.exports = {
       'slate-gray': '#d8d8d8',
       'twilight-blue': '#f3fcff',
       'amber': '#ffc000',
-      
     }),
     textColor: theme => ({
       ...theme('colors'),
