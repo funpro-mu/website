@@ -12,15 +12,14 @@
   (let [display (if display?
                   "inline-block"
                   "hidden")]
-    (str display " h-10 md:hidden outline-none border-0 bg-transparent text-gray-200 text-3xl")))
+    (str display " h-6 md:hidden outline-none border-0 bg-transparent text-gray-200 text-3xl")))
 
 (defn hamburger
   []
   [:<>
    [:button {:class (button-classes (not @visible))
              :on-click #(swap! visible not)}
-    [:span.inline-block.mx-auto
-     [gi/GiHamburgerMenu]]]
+    [gi/GiHamburgerMenu]]
    [:button {:class (button-classes @visible)
              :on-click #(swap! visible not)}
     [ai/AiOutlineCloseSquare]]
