@@ -2,7 +2,7 @@
 
 (defn menu-item
   [link title & [classes]]
-  [:a.hover:text-amber.text-sm {:href link :class classes} title])
+  [:a.text-twilight-blue.hover:text-amber.text-sm {:href link :class classes} title])
 
 (defn menu-items
   [& classes]
