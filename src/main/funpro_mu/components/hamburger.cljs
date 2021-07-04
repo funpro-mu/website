@@ -5,7 +5,7 @@
             ["react-icons/ai" :as ai]
             ["react-icons/gi" :as gi]))
 
-(def visible (r/atom false))
+(def menu-visible? (r/atom false))
 
 (defn button-classes
   [display?]
@@ -17,12 +17,12 @@
 (defn hamburger
   []
   [:<>
-   [:button {:class (button-classes (not @visible))
-             :on-click #(swap! visible not)}
+   [:button {:class (button-classes (not @menu-visible?))
+             :on-click #(swap! menu-visible? not)}
     [gi/GiHamburgerMenu]]
-   [:button {:class (button-classes @visible)
-             :on-click #(swap! visible not)}
+   [:button {:class (button-classes @menu-visible?)
+             :on-click #(swap! menu-visible? not)}
     [ai/AiOutlineCloseSquare]]
-   [:nav.flex.flex-col.items-end.absolute.right-0.top-14.bg-black-pearl.h-screen.px-6
-    {:class (if @visible "block" "hidden")}
-    [menu-items/menu-items "py-2"]]])
+   [:nav.flex.flex-col.items-end.absolute.right-0.top-14.bg-black-pearl.h-screen.px-6.md:hidden
+    {:class (if @menu-visible? "block" "hidden")}
+    [menu-items/menu-items "py-4"]]])
