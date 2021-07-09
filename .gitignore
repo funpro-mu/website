@@ -5,3 +5,4 @@
 /target
 /.shadow-cljs
 /.nrepl-port
+/.lsp/
