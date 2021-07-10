@@ -2,7 +2,7 @@
 
 
 (defn- typewriter-text [text]
-  [:span.typewriter.mx-auto.bg-black-pearl.bg-opacity-80.leading-snug.text-amber.text-5xl.md:text-9xl text])
+  [:span.typewriter.font-mono.mx-auto.bg-black-pearl.bg-opacity-80.leading-snug.text-amber.text-3xl.md:text-6xl text])
 
 
 (defn- highlight-clojure-code [function keyword]
